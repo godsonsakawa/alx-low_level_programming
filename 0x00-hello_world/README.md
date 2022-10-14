@@ -1,48 +1,45 @@
-Resources
+### 0x00-hello_world
 
-Read or watch:
+## Resources
 
+## Read or watch:
 
+1. Everything you need to know to start with C.pdf (You do not have to learn everything in there yet, but make sure you read it entirely first)
 
-Everything you need to know to start with C.pdf (You do not have to learn everything in there yet, but make sure you read it entirely first)
+2. Dennis Ritchie
 
-Dennis Ritchie
+3. “C” Programming Language: Bian Kernighan
 
-“C” Programming Language: Brian Kernighan
+4. Why C Programming Is Awesome
 
-Why C Programming Is Awesome
+5. Learning to program in C part 1
 
-Learning to program in C part 1
+6. Learning to program in C part 2
 
-Learning to program in C part 2
+7. Understanding C program Compilation Process
 
-Understanding C program Compilation Process
+8. Betty Coding Style
 
-Betty Coding Style
+9. Hash-bang under the hood (Look at only after you finish consuming the other resources)
 
-Hash-bang under the hood (Look at only after you finish consuming the other resources)
+10. Linus Torvalds on C vs. C++ (Look at only after you finish consuming the other resources)
 
-Linus Torvalds on C vs. C++ (Look at only after you finish consuming the other resources)
+#### man or help:
+>gcc
 
-man or help:
+>printf (3)
 
+>puts
 
+>putchar
 
-gcc
-
-printf (3)
-
-puts
-
-putchar
-
-Learning Objectives
+## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 
 
-General
+## General
 
 Why C programming is awesome
 
@@ -70,7 +67,7 @@ How to find the right header to include in your source code when using a standar
 
 How does the main function influence the return value of the program
 
-Copyright - Plagiarism
+## Copyright - Plagiarism
 
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 
@@ -80,9 +77,12 @@ You are not allowed to publish any content of this project.
 
 Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
-Requirements
 
-C
+### 
+
+## Requirements
+
+## C
 
 Allowed editors: vi, vim, emacs
 
@@ -100,7 +100,7 @@ You are not allowed to use system
 
 Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 
-Shell Scripts
+## Shell Scripts
 
 Allowed editors: vi, vim, emacs
 
@@ -111,3 +111,5 @@ All your scripts should be exactly two lines long ($ wc -l file should print 2)
 All your files should end with a new line
 
 The first line of all your files should be exactly #!/bin/bash
+
+### Happy_C_programming ();
