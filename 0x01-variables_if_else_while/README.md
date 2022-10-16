@@ -1,10 +1,10 @@
-## 0x01. C - Variables, if, else, while
+### 0x01. C - Variables, if, else, while
 
-### Resources
+## Resources
 
-READ OR WATCH:
+## READ OR WATCH:
 
-1.  Everything you need to know to start with C.pdf (You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Variables assignments”, “Comparisons”, “Logical operators”, “if, if…else”, “while loops”.)
+1. Everything you need to know to start with C.pdf (You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Variables assignments”, “Comparisons”, “Logical operators”, “if, if…else”, “while loops”.)
 
 2. Keywords and identifiers
 
@@ -28,13 +28,13 @@ READ OR WATCH:
 > ascii (You do not need to learn about scanf, getc, getchar, EOF, EXIT_SUCCESS, time, rand, srand, RAND_MAX, for loops, do...while loops, functions.)
 
 
-### Learning Objectives
+## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 
 
-### General
+## General
 
 What are the arithmetic operators and how to use them
 
