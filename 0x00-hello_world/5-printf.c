@@ -1,9 +1,10 @@
 #include <stdio.h>
-
-/* 
- * main -Entry point of the program
+/**
+ * main - Entry point
  *
- * return 0 (success)
+ * printf - formatted standard output
+ *
+ * return - Always  0 (success)
  */
 int main(void)
 {
