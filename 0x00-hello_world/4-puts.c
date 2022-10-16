@@ -1,8 +1,13 @@
 #include <stdio.h>
 
 /*
+ * main - entry point function
+ *
  * puts() ----- outputs characters and strings
+ *
+ * return ------Return: Always 0 (Success)
  */
+ 
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
