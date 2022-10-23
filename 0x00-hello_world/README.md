@@ -10,7 +10,7 @@
 
 3. “C” Programming Language: Bian Kernighan
 
-4. Why C Programming Is Awesome
+4. Why C Programming Is Awesome.
 
 5. Learning to program in C part 1
 
