@@ -26,7 +26,7 @@ void jack_bauer(void)
 				{
 					break;
 				}
-				for (mn2 = 0; mn2 < 9; mn2++)
+				for (mn2 = 0; mn2 < 10; mn2++)
 				{
 					if (hr1 == 2 && hr2 == 4)
 					{
