@@ -18,7 +18,7 @@
 
 7. Relational operators
 
-8. Logical operators
+8. Logical operator &&
 
 9. while loop in C
 
