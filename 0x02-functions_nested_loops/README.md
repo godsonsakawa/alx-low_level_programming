@@ -1,1 +1,3 @@
- ## Functions, nested loops. 
+ ## Functions, nested loops.
+
+__Intro. 
