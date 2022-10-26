@@ -20,7 +20,7 @@ void puts_half(char *str)
 	{
 		/*the odd elements have to be added by 1 first before division*/
 		n = (i + 1) / 2;
-		while (str[n] != '0')
+		while (str[n] != '\0')
 		{
 			_putchar(str[n]);
 			n++;
