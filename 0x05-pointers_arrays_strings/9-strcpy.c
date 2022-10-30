@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
   *_strcpy - copies a string
   *@dest:  the 1st string/destination string.
