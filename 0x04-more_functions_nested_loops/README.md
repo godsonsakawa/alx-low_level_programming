@@ -1,4 +1,4 @@
-## 0x02. C - Functions, nested loops
+## 0x04. C - Functions, nested loops
 
 ## Learning Objectives
 
