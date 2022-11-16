@@ -2,7 +2,7 @@
 /**
   * main - checks the code
   *
-  * return: name of the file compiled. 
+  * Return: Alwys 0 (success)i
   */
 int main(void)
 {
