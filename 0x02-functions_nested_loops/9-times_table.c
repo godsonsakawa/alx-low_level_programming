@@ -1,14 +1,13 @@
 #include "main.h"
 /**
-  * times_table - 
-  *
-  * Return:
+  * times_table - print 9-times table
+  * Return: void.
   */
 void times_table(void)
 {
-	int x = 0;
+	int x;
 
-	while (x <= 9)
+	for (x = 0; x <= 9; x++)
 	{
 		int y;
 
@@ -23,7 +22,7 @@ void times_table(void)
 				_putchar(mul / 10 + '0');
 				_putchar(mul % 10 + '0');
 			}
-			else 
+			else
 			{
 				_putchar(' ');
 				_putchar(mul + '0');
@@ -34,7 +33,6 @@ void times_table(void)
 			}
 		}
 		_putchar('\n');
-		x++;
 	}
 }
 
