@@ -5,25 +5,24 @@
   */
 void times_table(void)
 {
-	int x;
+	int x, y, mul;
 
-	for (x = 0; x <= 9; x++)
+	for (x = 0; x < 10; x++)
 	{
-		int y;
-
-		for (y = 0; y <= 9; y++)
+		for (y = 0; y < 10; y++)
 		{
-			int mul;
-
 			mul = x * y;
 			if (mul > 9)
 			{
 				_putchar(' ');
+				/*truncates the last value of the mul*/
 				_putchar(mul / 10 + '0');
+				/*returns the remainder, being last digit of mul*/
 				_putchar(mul % 10 + '0');
 			}
 			else
 			{
+				_putchar(' ');
 				_putchar(' ');
 				_putchar(mul + '0');
 			}
