@@ -4,19 +4,21 @@
 /**
  * print_to_98 - prints all natural numbers from n to 98
  * @n: starting interger
- * Return: void.
+ * Return: void if (!(n == 98)).
  */
 void print_to_98(int n)
 {
 	int i;
-
-	for (n = 0; n <= 98; n++)
+	
+	for (i = 98; i > n; n++)
 	{
 		printf("%d, ", n);
 	}
-	for (i = n; i >= 98; i--)
+	for (i = 98; i < n; n--)
 	{
-		printf("%d, ", i);
+		printf("%d, ", n);
 	}
+	if (n == i)
+		printf("%d", n);
 	printf("\n");
 }
