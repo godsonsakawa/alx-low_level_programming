@@ -2,8 +2,8 @@
 #include <string.h>
 /**
   *_strcpy - copies a string
-  *@dest:  the 1st string/destination string.
-  *@src: references the 2nd string which is copied/ source string.
+  *@dest:  the 1st string.
+  *@src: references the 2nd string which is copied.
   *Return: Always 0 (success)
   */
 char *_strcpy(char *dest, char *src)
