@@ -9,15 +9,13 @@ void print_rev(char *s)
 {
 	int i = 0;
 
-	while (s[i] != '\0')
+	for (; s[i] != '\0'; i++)
 	{
-		i++;
 	}
+	/*reverse the order of stdout*/
 	i--;
-
+	/*print out each character to stdout*/
 	for (; i >= 0; i--)
-	{
 		_putchar(s[i]);
-	}
 	_putchar('\n');
 }
