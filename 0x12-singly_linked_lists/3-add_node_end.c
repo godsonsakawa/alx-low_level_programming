@@ -5,8 +5,9 @@
 /**
   * add_node_end - adds a new node at the end of a list.
   * @head: head of the linked list>
-  * @str:
-  * Return:
+  * @str: string to be added to the list
+  * Return: if function fails - NULL
+  *         Otherwise- address of the new element.
   */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -17,7 +18,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 		return (NULL);
-	
+
 	copy = strdup(str);
 	if (str == NULL)
 	{
@@ -33,7 +34,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->str = copy;
 	new_node->len = len;
 	new_node->next = NULL;
-	
+
 	if (*head == NULL)
 		*head = new_node;
 	else
@@ -43,5 +44,5 @@ list_t *add_node_end(list_t **head, const char *str)
 			last_node = last_node->next;
 		last_node->next = new_node;
 	}
-	return (*head);
+	return (last_node);
 }
