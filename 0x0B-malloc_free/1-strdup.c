@@ -7,7 +7,7 @@
   * Return: a pointer to duplicated string..
   *         Otherwise - is string is NULL - NULL
   */
-char * _strdup(char *str)
+char *_strdup(char *str)
 {
 	char *copy;
 	int index, len = 0;
@@ -29,4 +29,4 @@ char * _strdup(char *str)
 	copy[len] = '\0';
 
 	return (copy);
-}	
+}
