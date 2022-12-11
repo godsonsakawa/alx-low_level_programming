@@ -4,7 +4,7 @@
   * create_file - a function that creates a file.
   * @filename: A pointer to a file to be created.
   * @text_content: strings in a file.
-  * Return: if file name is NULL/cant be created/ witten - -1
+  * Return: if file name is NULL or cant be create even witten - -1
   *         Otherwise - 1 on success.
   */
 int create_file(const char *filename, char *text_content)
