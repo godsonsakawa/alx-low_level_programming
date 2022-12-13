@@ -1,4 +1,8 @@
 #include "main.h"
+
+char *create_buffer(char *file);
+void close_file(int fd);
+
 /*
  * main - check the code.
  * @argc: number of arguments in the terminal.
@@ -7,45 +11,83 @@
  */
 int main(int argc, char **argv)
 {
+	int from, to, r, w;
+	char *buffer;
+
 	if (argc != 3)
 	{
-		printf(" Usage: cp file_from file_to\n");
+		printf(STDERR_FILENO, " Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	if (argv[1] == NULL)
-	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE\n");
-		exit(98);
-	}
-	if (w = -1)
-	{
-		printf("Error: Can't write to NAME_OF_THE_FILE\n");
-		exit(99);
-	}
+	
+	buffer = create_buffer(argv[2]);
+	from = open(argv[1], O_RDONLY);
+	r = read(from, buffer, 1024);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
+	do {
+		if (from == -1 || r == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			free(buffer);
+			exit(98);
+		}
+
+		w = write(to, buffer, r);
+
+		if (to == -1  || w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
+
+		r = read(from, buffer, 1024);
+		to = open(argv[2], O_WRONLY | O_APPEND);
+
+	} while (r > 0);
+
+	free(buffer);
+	close_file(from);
+	close_file(to);
+
+	return (0);
+}
+
+/**
+  * close_file - close file descriptors.
+  * @fd: The file desciptor to be closed.
+  */
+void close_file(int fd)
+{
+	int close;
+	close = close(fd);
+
 	if (close == -1)
 	{
-		printf("Error: Can't close fd FD_VALUE");
+		dprintf(STDERR_FILENO,"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	return (0);
 }
 
+
 /**
- * copy - copies contents of a file to another file.
- * @filename: pointer to our file.
- * @content: strings inside the file.
- * Return:
+ * buffer - allocates 1024 bytes for a buffer..
+ * @filename: pointer to our file our buffer is storing chars for.
+ * Return: a pointer to a newly allocated buffer.
  */
-int copy(const char *filename, char *content)
+int *create_buffer(char *filename)
 {
-	int w, o;
-	int len = 0;
-	char *filename2;
+	char *buffer;
 
-	for (len = 0; 
-	
-	o = open(filename, O_RDWR, 0664);
-	r = read(o, filename, len);
-	w = write(STDIN_FILENO, filename2, r);
+	buffer = malloc(sizeof(char) * 1024);
 
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: cant write to %s\n", file);
+		exit(99);
+	}
 
+	return (buffer);
+}
