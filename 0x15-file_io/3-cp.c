@@ -3,11 +3,11 @@
 char *create_buffer(char *filename);
 void close_file(int fd);
 
-/*
+/**
  * main - check the code.
  * @argc: number of arguments in the terminal.
  * @argv: strings as an argument in the terminal.
- * Return: 
+ * Return: 0 on success.
  */
 int main(int argc, char **argv)
 {
@@ -19,7 +19,6 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, " Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
@@ -61,18 +60,19 @@ int main(int argc, char **argv)
 void close_file(int fd)
 {
 	int c;
+
 	c = close(fd);
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %di\n", fd);
 		exit(100);
 	}
 }
 
 
 /**
- * buffer - allocates 1024 bytes for a buffer..
+ * create_buffer - allocates 1024 bytes for a buffer..
  * @filename: pointer to our file our buffer is storing chars for.
  * Return: a pointer to a newly allocated buffer.
  */
