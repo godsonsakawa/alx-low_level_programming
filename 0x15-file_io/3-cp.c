@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *create_buffer(char *file);
+char *create_buffer(char *filename);
 void close_file(int fd);
 
 /*
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf(STDERR_FILENO, " Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, " Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	
@@ -60,15 +60,14 @@ int main(int argc, char **argv)
   */
 void close_file(int fd)
 {
-	int close;
-	close = close(fd);
+	int c;
+	c = close(fd);
 
-	if (close == -1)
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO,"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	return (0);
 }
 
 
@@ -77,7 +76,7 @@ void close_file(int fd)
  * @filename: pointer to our file our buffer is storing chars for.
  * Return: a pointer to a newly allocated buffer.
  */
-int *create_buffer(char *filename)
+char *create_buffer(char *filename)
 {
 	char *buffer;
 
@@ -85,7 +84,7 @@ int *create_buffer(char *filename)
 
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: cant write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: cant write to %s\n", filename);
 		exit(99);
 	}
 
