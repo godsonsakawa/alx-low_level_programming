@@ -1,5 +1,4 @@
 # Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
-# C - language
 
 This repository contains programs written for the low-level programming and
 algorithm track at ALX. In these projects, I learned about data
@@ -40,7 +39,6 @@ The specific list of projects contained follows:
 
 ## Acknowledgements :pray:
 
-All work contained in this project was completed as part of the curriculum for
-ALX. ALX is a full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning.
-For more information, visit[this link](https://www.alxafrica.com/).
+All work contained in this project was completed as part of the curriculum. ALX is a full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning.
+For more information, visit [this link](https://www.alxafrica.com/).
 
