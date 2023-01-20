@@ -47,7 +47,7 @@ them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
     * `int div(int a, int b);`
     * `int mod(int a, int b);`
 
-* ** 3. Code injection: Win the giga millions!**
+* **3. Code injection: Win the giga millions!**
   * [101-make_me_win.sh](./101-make_me_win.sh):
 	  I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9. If you could run two commands on the same server where the Giga Millions program runs, could you make me win the Jackpot?
 
