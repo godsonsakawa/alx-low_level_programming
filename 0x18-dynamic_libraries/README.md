@@ -92,4 +92,4 @@ mss@gm_server$ ./gm 9 8 10 24 75 9
 mss@gm_server$ exit
 ```
 
-*  ** Tip: `LD_PRELOAD`
+* **Tip: `LD_PRELOAD`
