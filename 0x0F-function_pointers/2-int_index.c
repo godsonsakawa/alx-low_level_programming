@@ -1,4 +1,5 @@
-#include "main.h"
+#include "function_pointers.h"
+
 /**
   * int_index - Searches for an integer in an array of integers.
   * @array: The array of integers.
@@ -8,16 +9,16 @@
   *         Otherwise: The index of the first element for which
   *                     the cmp does not return 0.
   */
-int int_indec(int *array, int size, int (*cmp)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	int index;
 
 	if (array == NULL || cmp == NULL)
 		return (-1);
 
-	for (indec = 0; index < size; index++)
+	for (index = 0; index < size; index++)
 	{
-		if (cmp(array[index] != 0))
+		if (cmp(array[index]) != 0)
 			return (index);
 	}
 
