@@ -6,30 +6,31 @@
 int main(void)
 {
 	/* 48 represents 0 and 57 represents 9 in ASCII*/
-	int i = 48;
-	int j = 48;
+	int digit1 = 48;
+	int digit2 = 48;
 	/*represents first digit on the double digits*/
-	while (j < 58)
+	while (digit1 < 57)
 	{
-		/*represents second int on the double integrers*/
-		i = 48;
-		while (i < 58)
+		/*represents second int on the double integers*/
+		digit2 = 48;
+		while (digit2 < 58)
 		{
 			/*To eliminiate similar digits from re-occuring*/
-			if (j != i && j < i)
+			/* printing only the small combinations */
+			if (digit1 != digit2 && digit1 < digit2)
 			{
-				putchar(j);
-				putchar(i);
-				if (i == 57 && j == 56)
+				putchar(digit1);
+				putchar(digit2);
+				if (digit1 == 56 && digit2 == 57)
 				{
 					break;
 				}
 				putchar(',');
 				putchar(' ');
 			}
-			i++;
+			digit2++;
 		}
-		j++;
+		digit1++;
 	}
 	putchar('\n');
 	return (0);
