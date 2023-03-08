@@ -9,42 +9,42 @@ void print_times_table(int n)
 {
 	int row, column, mul;
 
-	for (row = 0; row <= n; row++)
+	if (n > 0 && n < 15)
 	{
-		for (column = 0; column <= n; column++)
+		for (row = 0; row <= n; row++)
 		{
-			mul = row * column;
-
-			if (column == 0)
+			for (column = 0; column <= n; column++)
 			{
-				_putchar(mul + '0');
+				mul = row * column;
+				if (column == 0)
+				{
+					_putchar(mul + '0');
+				}
+				else if (mul <= 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(mul + '0');
+				}
+				else if (mul < 100)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(mul / 10 + '0');
+					_putchar(mul  % 10 + '0');
+				}
+				else
+				{
+					_putchar(' ');
+					_putchar(((mul / 100) % 10) + '0');
+					_putchar(((mul / 10) % 10) + '0');
+					_putchar((mul  % 10) + '0');
+				}
+				if (column != n)
+					_putchar(',');
 			}
-			else if (mul <= 9)
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(mul + '0');
-			}
-			else if (mul < 100)
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(mul / 10 + '0');
-				_putchar(mul  % 10 + '0');
-			}
-			else
-			{
-				_putchar(' ');
-				_putchar(((mul / 100) % 10) + '0');
-				_putchar(((mul / 10) % 10) + '0');
-				_putchar((mul  % 10) + '0');
-			}
-			if (column != n)
-			{
-				_putchar(',');
-			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
