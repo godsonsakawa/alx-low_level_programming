@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
   * print_times_table - prints n times table
   * @n: references the number showing type of times table
@@ -6,33 +7,40 @@
   */
 void print_times_table(int n)
 {
-	int x, y, mul;
+	int row, column, mul;
 
-	:xif (n <= 15 && n > 0)
-	for (x = 0; x <= n; x++)
+	for (row = 0; row <= n; row++)
 	{
-		for (y = 0; y <= n; y++)
+		for (column = 0; column <= n; column++)
 		{
-			mul = x * y;
-			if (mul <= 9 && mul > 0)
+			mul = row * column;
+
+			if (column == 0)
 			{
+				_putchar(mul + '0');
+			}
+			else if (mul <= 9)
+			{
+				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(mul + '0');
 			}
-			if (mul <= 99 && mul > 0)
+			else if (mul < 100)
 			{
-				 _putchar(' ');
-				 _putchar(mul / 10 + '0');
-				 _putchar(mul  % 10 + '0');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(mul / 10 + '0');
+				_putchar(mul  % 10 + '0');
 			}
-			else if (mul >= 100)  
+			else
 			{
+				_putchar(' ');
 				_putchar(((mul / 100) % 10) + '0');
 				_putchar(((mul / 10) % 10) + '0');
 				_putchar((mul  % 10) + '0');
 			}
-			if (y != n)
+			if (column != n)
 			{
 				_putchar(',');
 			}
