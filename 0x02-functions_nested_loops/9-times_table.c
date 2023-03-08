@@ -5,14 +5,14 @@
   */
 void times_table(void)
 {
-	int x, y, mul;
+	int row, column, mul;
 
-	for (x = 0; x < 10; x++)
+	for (row = 0; row < 10; row++)
 	{
-		for (y = 0; y < 10; y++)
+		for (column = 0; column < 10; column++)
 		{
-			mul = x * y;
-			if (y == 0)
+			mul = row * column;
+			if (column == 0)
 			{
 				_putchar(mul + '0');
 			}
@@ -30,7 +30,7 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(mul + '0');
 			}
-			if (y != 9)
+			if (column != 9)
 			{
 				_putchar(',');
 			}
