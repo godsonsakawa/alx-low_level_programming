@@ -7,7 +7,7 @@ int main(void)
 {
 	/* 48 represents 0 and 57 represents 9 in ASCII*/
 	int digit1 = 48;
-	int digit2 = 48;
+	int digit2;
 	/*represents first digit on the double digits*/
 	while (digit1 < 57)
 	{
