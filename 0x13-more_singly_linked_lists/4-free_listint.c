@@ -7,13 +7,14 @@
  * Description: To free memory of a linked list, we need to traverse the list
  *		and free each node one by one.
  */
-void free_listint(listint_t *head)	
+void free_listint(listint_t *head)
 {
 	listint_t *current = head;
 
 	while (current != NULL)
 	{
 		listint_t *temp = current;
+
 		current = current->next;
 		free(temp);
 	}
