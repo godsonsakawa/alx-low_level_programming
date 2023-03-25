@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
   * print_list - prints all elements of a lits
-  * @h: references our structure.
+  * @h: Represents the first node.
   * Return: number of nodes.
   */
 size_t print_list(const list_t *h)
