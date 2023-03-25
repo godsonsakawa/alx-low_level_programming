@@ -10,20 +10,22 @@
   */
 list_t *add_node(list_t **head, const char *str)
 {
+	/* 1. allocate node */
 	list_t *new_node = (list_t *)malloc(sizeof(list_t));
-	size_t nodePtr;
+	size_t count;
 
 	if (new_node == NULL)
 		return (NULL);
-
+	/* 2. put/Copy in the data  */
 	new_node->str = strdup(str);
 
-	for (nodePtr = 0; str[nodePtr]; nodePtr++)
+	for (count = 0; str[count]; count++)
 	{
-	}
-
-	new_node->len = nodePtr;
+	}	
+	new_node->len = count;
+	/* 3. Make next of new node as head */
 	new_node->next = *head;
+	/* 4. move the head to point to the new node */
 	*head = new_node;
 
 	return (new_node);
