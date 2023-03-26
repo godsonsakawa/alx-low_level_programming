@@ -20,20 +20,31 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->n = n;
 	new_node->next = NULL;
 
-	if (idx == 1)
+	/**
+	 * If the index is 0, the function inserts the new node
+	 * at the beginning of the list by modifying the head node,
+	 * and returns the address of the new node.
+	 */
+	if (idx == 0)
 	{
 		new_node->next = *head;
 		*head = new_node;
 		return (new_node);
 	}
 
+	/**
+	 * If the index is not 0; This For loop traverses the list to stop at idx-1
+	 * since we want to stop at the node before the position
+	 * where the new node should be inserted.
+	 */
 	for (node = 0; node < idx - 1 && current != NULL; node++)
 	{
 		current = current->next;
 	}
 
-	if (current == NULL)
+	if (current == NULL || current->next == NULL)
 	{
+		free(new_node);
 		return (NULL);
 	}
 
