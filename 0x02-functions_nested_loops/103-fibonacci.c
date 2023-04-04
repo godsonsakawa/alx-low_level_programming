@@ -2,7 +2,7 @@
 
 /**
  * main - prints the sum of even-valued fibonnacci sequence
- * 		terms not exceeding 4,000,000
+ *	terms not exceeding 4,000,000
  * Return: Always 0.
  */
 int main(void)
@@ -21,6 +21,6 @@ int main(void)
 
 	}
 	printf("%d\n", sum);
-	
+
 	return (0);
 }
