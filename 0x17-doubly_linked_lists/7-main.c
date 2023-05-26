@@ -18,5 +18,10 @@ int main(void)
     add_dnodeint_end(&head, 2);
     add_dnodeint_end(&head, 3);
     print_dlistint(head);
+    printf("----------\n");
+    insert_dnodeint_at_index(&head, 1, 2023);
+    print_dlistint(head);
+    free_dlistint(head);
+    head = NULL;
     return (EXIT_SUCCESS);
 }
