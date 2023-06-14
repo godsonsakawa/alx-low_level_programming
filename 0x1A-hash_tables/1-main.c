@@ -10,9 +10,9 @@
  */
 int main(void)
 {
-    char *s;
+	char *s;
 
-    s = "cisfun";
+	s = "cisfun";
     printf("%lu\n", hash_djb2((unsigned char *)s));
     s = "Don't forget to tweet today";
     printf("%lu\n", hash_djb2((unsigned char *)s));
