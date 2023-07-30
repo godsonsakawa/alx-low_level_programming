@@ -28,7 +28,13 @@ int main(int argc, char *argv[])
 	if (f == NULL)
 	{
 		printf("Error\n");
-		return (1);
+		return (99);
+	}
+
+	if ((*s == '/' || *s == '%') && num2 == 0)
+	{
+		printf("Error\n");
+		return (100);
 	}
 
 	result = f(num1, num2);
